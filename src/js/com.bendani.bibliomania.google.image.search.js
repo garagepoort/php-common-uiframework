@@ -18,8 +18,7 @@ angular
                 loaderImage: "@"
             },
             restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>',
-            templateUrl: "../BiblioMania/views/partials/google-image-search-directive.html",
+            template: '<div ng-include="getTemplateUrl()"></div>'
             controller: ['$rootScope', '$scope', 'GoogleImage', function ($rootScope, $scope, GoogleImage) {
 
                 $scope.getTemplateUrl = function(){
