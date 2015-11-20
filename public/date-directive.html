@@ -1,0 +1,31 @@
+<ng-form name="dateForm">
+    <div class="form-container">
+        <div class="form-group" ng-class="required ? 'required' : ''">
+            <label class="control-label col-md-2">{{ label }}</label>
+
+            <div class="col-md-7">
+                <table>
+                    <tr>
+                        <td>Dag:</td>
+                        <td style='padding: 0 10px;'>
+                            <input name="day" type="number" class="form-control no-spinner" placeholder="dag" ng-model="dateModel.day" style="width: 80px" ng-maxlength="2" min="1" max="31"/>
+                        </td>
+                        <td>Maand:</td>
+                        <td style='padding: 0 10px;'>
+                            <input ng-required="isMonthRequired()" name="month" type="number" class="form-control no-spinner" placeholder="maand" ng-model="dateModel.month" style="width: 80px" ng-maxlength="2" min="1" max="12"/>
+                        </td>
+                        <td>Jaar:</td>
+                        <td style='padding: 0 10px;'>
+                            <input ng-required="isYearRequired()" name="year" type="number" class="form-control no-spinner" placeholder="jaar" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" />
+                        </td>
+                    </tr>
+                </table>
+                <span ng-show="dateForm.day.$invalid && dateForm.day.$dirty" class="form-error-message help-inline"><i class="fa fa-exclamation-circle"></i> Ongeldige dag</span>
+                <span ng-show="dateForm.month.$invalid && dateForm.month.$dirty" class="form-error-message help-inline"><i class="fa fa-exclamation-circle"></i> Ongeldige maand</span>
+                <span ng-show="dateForm.year.$error.required && dateForm.$dirty" class="form-error-message help-inline"><i class="fa fa-exclamation-circle"></i> Jaar is verplicht</span>
+                <span ng-show="dateForm.month.$error.required && dateForm.$dirty" class="form-error-message help-inline"><i class="fa fa-exclamation-circle"></i> Maand is verplicht</span>
+                <span ng-show="dateForm.year.$error.pattern && dateForm.year.$dirty" class="form-error-message help-inline"><i class="fa fa-exclamation-circle"></i> Ongeldig jaartal</span>
+            </div>
+        </div>
+    </div>
+</ng-form>
