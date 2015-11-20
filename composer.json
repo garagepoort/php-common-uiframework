@@ -1,5 +1,5 @@
 {
-  "name": "bendani/php-common/ui-framework",
+  "name": "bendani/php-common/uiframework",
   "autoload": {
     "psr-4": {
       "Bendani\\PhpCommon\\UiFramework\\": "src"
