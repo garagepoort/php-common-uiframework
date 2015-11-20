@@ -22,7 +22,7 @@ angular
                 };
 
                 $scope.isYearRequired = function(){
-                    if($scope.required == true){
+                    if($scope.required === "true"){
                         return true;
                     }
                     if($scope.dateModel === undefined){
