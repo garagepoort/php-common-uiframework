@@ -18,7 +18,7 @@ angular
                 loaderImage: "@"
             },
             restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>'
+            template: '<div ng-include="getTemplateUrl()"></div>',
             controller: ['$rootScope', '$scope', 'GoogleImage', function ($rootScope, $scope, GoogleImage) {
 
                 $scope.getTemplateUrl = function(){
