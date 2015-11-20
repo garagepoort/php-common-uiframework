@@ -1,5 +1,5 @@
 angular
-    .module('com.bendani.bibliomania.date', [])
+    .module('php.common.uiframework.date', [])
     .directive('date', function (){
         return {
             scope: {
