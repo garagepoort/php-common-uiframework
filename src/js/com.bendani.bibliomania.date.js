@@ -39,7 +39,7 @@ angular
                 };
 
                 function isBlank(string){
-                    return string === undefined || string.trim() === '';
+                    return string === undefined || string === '';
                 }
 
                 init();
