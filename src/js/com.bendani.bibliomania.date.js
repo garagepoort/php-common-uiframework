@@ -8,7 +8,6 @@ angular
                 required: '@'
             },
             restrict: "E",
-            templateUrl: "../BiblioMania/views/partials/date-directive.html",
             template: '<div ng-include="getTemplateUrl()"></div>',
             controller: ['$rootScope', '$scope', function($rootScope, $scope) {
 
