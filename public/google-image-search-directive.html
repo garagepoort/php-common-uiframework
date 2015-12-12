@@ -1,4 +1,4 @@
 <div ng-show="(images !== undefined && images.length > 0) || loading" class="well">
     <span ng-show="loading" class="center-block glyphicon glyphicon-refresh spinning"></span>
-    <img ng-class="imageModel == image.link ? 'google-selected-image' : ''" class="google-image" style="margin: 10px;" ng-repeat="image in images" ng-src="{{ image.image.thumbnailLink }}" ng-click="selectImageUrl(image.link)">
+    <img ng-class="imageModel == image.link ? 'google-selected-image' : ''" class="google-image" style="margin: 10px;" ng-repeat="image in images" ng-src="{{ image.link }}" ng-click="selectImageUrl(image.link)">
 </div>
