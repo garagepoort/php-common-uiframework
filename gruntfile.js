@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
         concat: {
             js: {
-                src: ['src/js/*.js'],
+                src: ['src/**/*.js'],
                 dest: 'src/js/concat.js'
             }
         },
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'public/uiframework.min.css': ['src/css/uiframework.css']
+                    'public/uiframework.min.css': ['src/**/*.css']
                 }
             }
         },
