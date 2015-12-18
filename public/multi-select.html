@@ -1,0 +1,13 @@
+<div>
+    <div class="input-group" style="width: 100%; float: right; margin-bottom: 20px;">
+        <input id="searchItemsInput" ng-model="data.searchItemsQuery" type="text" class="form-control half-round-corners-left" placeholder="Search" aria-describedby="basic-addon1">
+        <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
+    </div>
+    <div class="input-group" style="width: 100%; cursor: pointer">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in allItems | filter: search" ng-click="selectItem(item)" style="cursor: pointer">
+                <input style="cursor: pointer" ng-checked="selectedItems.indexOf(item) != -1" type="checkbox"/> <label style="cursor: pointer">{{item.key}}</label>
+            </li>
+        </ul>
+    </div>
+</div>
