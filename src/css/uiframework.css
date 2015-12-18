@@ -90,6 +90,24 @@ button {
 .margin-5 {
   margin: 5px;
 }
+.margin-left-15 {
+  margin-left: 15px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-5 {
+  margin-left: 5px;
+}
+.margin-right-15 {
+  margin-right: 15px;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+.margin-right-5 {
+  margin-right: 5px;
+}
 .padding-15 {
   padding: 15px;
 }
