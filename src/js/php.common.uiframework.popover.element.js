@@ -4,7 +4,11 @@ angular
         return{
             link: function(scope, element, attrs) {
                 element.on('click', function(){
-                    element.addClass('trigger');
+                    if(element.hasClass('trigger')){
+                        element.removeClass('trigger');
+                    }else{
+                        element.addClass('trigger');
+                    }
                 });
             }
         }
@@ -21,23 +25,26 @@ angular
             link: function(scope, element, attrs) {
                 var trigger = document.getElementsByClassName('trigger');
 
-                function closeTrigger(i) {
-                    $timeout(function(){
-                        angular.element(trigger[0]).click();
-                        angular.element(trigger[0]).removeClass('trigger');
-                    });
-                }
-
                 element.on('click', function(event){
                     var etarget = angular.element(event.target);
                     var tlength = trigger.length;
 
-                    if(!etarget.hasClass('trigger') && !etarget.parents('.exclude').length) {
-                        for(var i=0; i<tlength; i++) {
-                            closeTrigger(i)
+                    for(var i=0; i<tlength; i++) {
+                        if(trigger[0] === etarget[0]){
+                            return;
+                        }else if(etarget.parents('.' + scope.excludeClass).length){
+                            return;
+                        }else{
+                            closeTrigger(i);
                         }
                     }
                 });
+
+                function closeTrigger(i) {
+                    $timeout(function(){
+                        angular.element(trigger[0]).click();
+                    });
+                }
             }
         };
     }]);

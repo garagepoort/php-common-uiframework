@@ -10,16 +10,8 @@ angular
             template: '<div ng-include="getTemplateUrl()"></div>',
             controller: ['$scope', '$rootScope', function($scope, $rootScope) {
                 function init(){
-                    $scope.groups = [];
                     $scope.data = {};
                     $scope.data.searchItemsQuery = "";
-
-                    for(var i = 0; i < $scope.allItems.length; i++){
-                        var group = $scope.allItems[i].group;
-                        if($scope.groups.indexOf(group) == -1){
-                            $scope.groups.push(group);
-                        }
-                    }
                 }
 
                 $scope.selectItem = function selectItem(item){
@@ -32,7 +24,7 @@ angular
                 };
 
                 $scope.search = function(item){
-                    if ( (item.value.toLowerCase().indexOf($scope.data.searchItemsQuery) !== -1)){
+                    if ( (item.key.toLowerCase().indexOf($scope.data.searchItemsQuery) !== -1)){
                         return true;
                     }
                     return false;
