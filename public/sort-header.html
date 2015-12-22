@@ -1,10 +1,8 @@
-<table class="table table-hover" style="table-layout: fixed">
-    <thead>
+<thead>
     <tr style="cursor: pointer">
-        <th class="sort-header" ng-repeat="sortOption in sortOptions" ng-click="order(sortOption)">
+        <th class="sort-header" ng-repeat="sortOption in sortOptions" ng-click="order(sortOption)" style="width: {{ sortOption.width }}%">
             {{sortOption.key}}
             <i class="fa" ng-show="sortOption.predicate === currentPredicate" ng-class="reverseOrder ? 'fa-caret-up' : 'fa-caret-down'"></i>
         </th>
     </tr>
-    </thead>
-</table>
+</thead>

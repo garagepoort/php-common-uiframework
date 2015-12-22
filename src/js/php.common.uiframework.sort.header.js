@@ -7,17 +7,14 @@ angular
                 sortOptions: "=",
                 currentPredicate: "=",
             },
-            restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>',
-            controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+            restrict: "A",
+            replace: true,
+            templateUrl: 'packages/bendani/php-common/uiframework/sort-header.html',
+            controller: ['$scope', function($scope) {
 
                 $scope.order = function(sortOption) {
                     $scope.reverseOrder = ($scope.currentPredicate === sortOption.predicate) ? !$scope.reverseOrder : false;
                     $scope.currentPredicate = sortOption.predicate;
-                };
-
-                $scope.getTemplateUrl = function(){
-                    return $rootScope.baseUrl + "packages/bendani/php-common/uiframework/sort-header.html";
                 };
             }]
         };

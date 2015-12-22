@@ -6,8 +6,8 @@ angular
                 model: '='
             },
             restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>',
-            controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+            templateUrl: 'packages/bendani/php-common/uiframework/radio-select.html',
+            controller: ['$scope', function($scope) {
                 function init(){
                     $scope.data = {};
                     $scope.data.searchItemsQuery = "";
@@ -22,11 +22,6 @@ angular
                         return true;
                     }
                     return false;
-                };
-
-
-                $scope.getTemplateUrl = function(){
-                    return $rootScope.baseUrl + "packages/bendani/php-common/uiframework/radio-select.html";
                 };
 
                 init();

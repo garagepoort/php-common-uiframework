@@ -8,7 +8,7 @@ angular
                 required: '@'
             },
             restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>',
+            templateUrl: 'packages/bendani/php-common/uiframework/date-directive.html',
             controller: ['$rootScope', '$scope', function($rootScope, $scope) {
 
                 function init(){
@@ -16,10 +16,6 @@ angular
                         $scope.dateModel = {};
                     }
                 }
-
-                $scope.getTemplateUrl = function(){
-                    return $rootScope.baseUrl + "packages/bendani/php-common/uiframework/date-directive.html";
-                };
 
                 $scope.isYearRequired = function(){
                     if($scope.required === "true"){

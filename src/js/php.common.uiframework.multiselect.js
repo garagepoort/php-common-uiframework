@@ -7,8 +7,8 @@ angular
                 selectedItems: "="
             },
             restrict: "E",
-            template: '<div ng-include="getTemplateUrl()"></div>',
-            controller: ['$scope', '$rootScope', function($scope, $rootScope) {
+            templateUrl: 'packages/bendani/php-common/uiframework/multi-select.html',
+            controller: ['$scope', function($scope) {
                 function init(){
                     $scope.data = {};
                     $scope.data.searchItemsQuery = "";
@@ -28,11 +28,6 @@ angular
                         return true;
                     }
                     return false;
-                };
-
-
-                $scope.getTemplateUrl = function(){
-                    return $rootScope.baseUrl + "packages/bendani/php-common/uiframework/multi-select.html";
                 };
 
                 init();
