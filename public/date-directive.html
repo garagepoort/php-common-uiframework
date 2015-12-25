@@ -6,13 +6,13 @@
             <table>
                 <tr>
                     <td style='padding-right: 3px;'>
-                        <input name="day" type="number" class="form-control no-spinner" placeholder="DD" ng-model="dateModel.day" style="width: 50px" ng-maxlength="2" min="1" max="31"/>
+                        <input name="day" type="number" class="form-control input-sm no-spinner" placeholder="DD" ng-model="dateModel.day" style="width: 50px" ng-maxlength="2" min="1" max="31"/>
                     </td>
                     <td style='padding: 0 3px;'>
-                        <input ng-required="isMonthRequired()" name="month" type="number" class="form-control no-spinner" placeholder="MM" ng-model="dateModel.month" style="width: 50px" ng-maxlength="2" min="1" max="12"/>
+                        <input ng-required="isMonthRequired()" name="month" type="number" class="form-control input-sm no-spinner" placeholder="MM" ng-model="dateModel.month" style="width: 50px" ng-maxlength="2" min="1" max="12"/>
                     </td>
                     <td style='padding: 0 3px;'>
-                        <input ng-required="isYearRequired()" name="year" type="number" class="form-control no-spinner" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" />
+                        <input ng-required="isYearRequired()" name="year" type="number" class="form-control input-sm no-spinner" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" />
                     </td>
                 </tr>
             </table>
