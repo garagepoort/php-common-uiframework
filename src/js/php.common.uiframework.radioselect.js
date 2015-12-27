@@ -3,7 +3,8 @@ angular
     .directive('radioSelect', function (){
         return {
             scope: {
-                model: '='
+                model: '=',
+                onSelect: '&'
             },
             restrict: "E",
             templateUrl: 'packages/bendani/php-common/uiframework/radio-select.html',
@@ -15,6 +16,9 @@ angular
 
                 $scope.selectItem = function selectItem(item){
                     $scope.model.selected = item;
+                    if($scope.onSelect){
+                        $scope.onSelect({item: item});
+                    }
                 };
 
                 $scope.search = function(item){
