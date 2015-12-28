@@ -4,12 +4,16 @@ angular
         return {
             scope: {
                 model: '=',
-                onSelect: '&'
+                onSelect: '&',
+                showSearchBox: '='
             },
             restrict: "E",
             templateUrl: 'packages/bendani/php-common/uiframework/radio-select.html',
             controller: ['$scope', function($scope) {
                 function init(){
+                    if($scope.showSearchBox === undefined || $scope.showSearchBox === null){
+                        $scope.showSearchBox = true;
+                    }
                     $scope.data = {};
                     $scope.data.searchItemsQuery = "";
                 }

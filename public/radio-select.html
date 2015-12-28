@@ -1,10 +1,10 @@
 <div>
-    <div class="input-group" style="width: 100%; float: right; margin-bottom: 20px;">
+    <div ng-show="showSearchBox" class="input-group" style="width: 100%; float: right; margin-bottom: 20px;">
         <input id="searchItemsInput" ng-model="data.searchItemsQuery" type="text" class="form-control half-round-corners-left" placeholder="Search" aria-describedby="basic-addon1">
         <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
     </div>
-    <div class="input-group" style="width: 100%; cursor: pointer">
-        <ul class="list-group">
+    <div class="input-group" style="width: 100%; cursor: pointer;">
+        <ul class="list-group" style="margin-bottom: 0px">
             <li class="list-group-item" ng-repeat="item in model.all | filter: search" ng-click="selectItem(item)" style="cursor: pointer">
                 <input style="cursor: pointer" ng-model="model.selected" ng-value="item" type="radio"/> <label style="cursor: pointer">{{item.key}}</label>
             </li>
