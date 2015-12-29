@@ -5,7 +5,8 @@ angular
             scope: {
                 label: '@',
                 dateModel: "=ngModel",
-                required: '@'
+                required: '@',
+                submitAttempted: '='
             },
             restrict: "E",
             templateUrl: 'packages/bendani/php-common/uiframework/date-directive.html',
