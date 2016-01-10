@@ -12,12 +12,12 @@
                     </td>
                     <td style='padding: 0 3px;'>
                         <div ng-class="{'has-error has-feedback' : (dateForm.month.$invalid || dateForm.month.$error.required) && (dateForm.month.$dirty  || submitAttempted)}">
-                            <input ng-required="isMonthRequired()" name="month" type="number" class="form-control input-sm no-spinner padding-right-0" placeholder="MM" ng-model="dateModel.month" style="width: 50px" min="1" max="12"/>
+                            <input ng-required="isMonthRequired()" name="month" type="number" class="date-input form-control input-sm no-spinner padding-right-0" placeholder="MM" ng-model="dateModel.month" style="width: 50px" min="1" max="12"/>
                         </div>
                     </td>
                     <td style='padding: 0 3px;'>
                         <div ng-class="{'has-error has-feedback' : (dateForm.year.$invalid || dateForm.year.$error.required || dateForm.year.$error.pattern) && (dateForm.year.$dirty || submitAttempted)}">
-                            <input ng-required="isYearRequired()" name="year" type="number" class="form-control input-sm no-spinner padding-right-0" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" />
+                            <input ng-required="isYearRequired()" name="year" type="number" class="date-input form-control input-sm no-spinner padding-right-0" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" />
                         </div>
                     </td>
                 </tr>
