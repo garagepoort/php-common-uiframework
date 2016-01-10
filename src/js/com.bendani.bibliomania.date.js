@@ -18,18 +18,6 @@ angular
                     }
                 }
 
-                $scope.$watch('dateModel.day', function(newVal, oldVal) {
-                    if(newVal !== undefined && newVal.length > 2) {
-                        $scope.dateModel.day = oldVal;
-                    }
-                    //if(newVal.month !== undefined && newVal.month.length > 2) {
-                    //    $scope.dateModel.month = oldVal.month;
-                    //}
-                    //if(newVal.year !== undefined && newVal.year.length > 2) {
-                    //    $scope.dateModel.year = oldVal.year;
-                    //}
-                });
-
                 $scope.isYearRequired = function(){
                     if($scope.required === "true"){
                         return true;
