@@ -4,7 +4,9 @@ angular
         return {
             scope: {
                 allItems: "=",
-                selectedItems: "="
+                selectedItems: "=",
+                onSelect: "&",
+                onDeselect: "&",
             },
             restrict: "E",
             templateUrl: 'packages/bendani/php-common/uiframework/multi-select.html',
@@ -18,8 +20,14 @@ angular
                     var index = $scope.selectedItems.indexOf(item);
                     if(index > -1){
                         $scope.selectedItems.splice(index, 1);
+                        if($scope.onDeselect){
+                            $scope.onDeselect({item: item});
+                        }
                     }else{
                         $scope.selectedItems.push(item);
+                        if($scope.onSelect){
+                            $scope.onSelect({item: item});
+                        }
                     }
                 };
 
