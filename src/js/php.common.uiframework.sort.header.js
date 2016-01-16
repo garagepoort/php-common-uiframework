@@ -5,7 +5,7 @@ angular
             scope: {
                 reverseOrder: "=",
                 sortOptions: "=",
-                currentPredicate: "=",
+                currentPredicate: "="
             },
             restrict: "A",
             replace: true,
