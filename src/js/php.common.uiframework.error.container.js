@@ -22,6 +22,7 @@ angular.module('com.bendani.php.common.uiframework')
                 if (data.data === undefined) {
                     _currentErrorCode = "unexpected error";
                 } else if (data.status == 401) {
+                    $rootScope.loggedInUser = undefined;
                     $location.path("/login");
                 } else {
                     _currentErrorCode = "Er ging iets mis: " + data.data.message;
