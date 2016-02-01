@@ -5,19 +5,19 @@
 
             <table>
                 <tr>
-                    <td style='padding-right: 3px;'>
+                    <td style='padding-right: 5px;'>
                         <div ng-class="{'has-error has-feedback' : dateForm.day.$invalid && (dateForm.day.$dirty || submitAttempted)}">
-                            <input name="day" type="number" class="form-control input-sm no-spinner" placeholder="DD" ng-model="dateModel.day" style="width: 50px" ng-maxlength="2" min="1" max="31" limit-to="2"/>
+                            <input name="day" type="number" class="form-control date-directive-input input-sm no-spinner padding-right-0 date-input" placeholder="DD" ng-model="dateModel.day" style="width: 50px" ng-maxlength="2" min="1" max="31" limit-to="2"/>
                         </div>
                     </td>
-                    <td style='padding: 0 3px;'>
+                    <td style='padding: 0 5px;'>
                         <div ng-class="{'has-error has-feedback' : (dateForm.month.$invalid || dateForm.month.$error.required) && (dateForm.month.$dirty  || submitAttempted)}">
-                            <input ng-required="isMonthRequired()" name="month" type="number" class="form-control input-sm no-spinner" placeholder="MM" ng-model="dateModel.month" style="width: 50px" ng-maxlength="2" min="1" max="12" limit-to="2"/>
+                            <input ng-required="isMonthRequired()" name="month" type="number" class="form-control input-sm no-spinner padding-right-0 date-input" placeholder="MM" ng-model="dateModel.month" style="width: 50px;" ng-maxlength="2" min="1" max="12" limit-to="2"/>
                         </div>
                     </td>
                     <td style='padding: 0 3px;'>
                         <div ng-class="{'has-error has-feedback' : (dateForm.year.$invalid || dateForm.year.$error.required || dateForm.year.$error.pattern) && (dateForm.year.$dirty || submitAttempted)}">
-                            <input ng-required="isYearRequired()" name="year" type="number" class="form-control input-sm no-spinner" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" limit-to="4"/>
+                            <input ng-required="isYearRequired()" name="year" type="number" class="form-control input-sm no-spinner padding-right-0 date-input" placeholder="YYYY" ng-model="dateModel.year" style="width: 80px" ng-pattern="/^[0-9]{4}$/" limit-to="4"/>
                         </div>
                     </td>
                 </tr>

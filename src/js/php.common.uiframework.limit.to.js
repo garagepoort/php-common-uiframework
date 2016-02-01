@@ -1,11 +1,12 @@
 angular.module('com.bendani.php.common.uiframework')
-    .directive("limitTo", [function() {
+    .directive("limitTo", ['$timeout', function($timeout) {
     return {
         restrict: "A",
         link: function(scope, elem, attrs) {
             var limit = parseInt(attrs.limitTo);
+
             angular.element(elem).on("keydown", function() {
-                if (this.value == limit) return false;
+                this.value = this.value.substring(0, limit - 1);
             });
         }
     }

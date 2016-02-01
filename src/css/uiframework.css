@@ -147,6 +147,18 @@ button {
 .padding-right-15 {
   padding-right: 15px;
 }
+.padding-left-0 {
+  padding-left: 0px;
+}
+.padding-left-5 {
+  padding-left: 5px;
+}
+.padding-left-10 {
+  padding-left: 10px;
+}
+.padding-left-15 {
+  padding-left: 15px;
+}
 .date-input.padding-right-0 {
   padding-right: 0px;
 }
