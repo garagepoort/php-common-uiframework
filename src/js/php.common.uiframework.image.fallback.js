@@ -2,7 +2,7 @@ angular.module('com.bendani.php.common.uiframework')
     .directive('srcWithFallback', function () {
     return{
         link: function postLink(scope, element, attrs) {
-            var fallback = '';
+            var fallback = attrs.fallback;
 
             attrs.$observe('srcWithFallback', function(newVal, oldVal){
                 var img = new Image();
