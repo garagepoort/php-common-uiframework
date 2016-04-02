@@ -6,7 +6,7 @@
     <div class="input-group" style="width: 100%; cursor: pointer">
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="item in allItems | filter: search" ng-click="selectItem(item)" style="cursor: pointer">
-                <input style="cursor: pointer" ng-checked="selectedItems.indexOf(item) != -1" type="checkbox"/> <label style="cursor: pointer">{{item.key}}</label>
+                <input style="cursor: pointer" ng-checked="itemIsSelected(item)" type="checkbox"/> <label style="cursor: pointer">{{item.key}}</label>
             </li>
         </ul>
     </div>
