@@ -1,5 +1,5 @@
 angular
-    .module('php.common.uiframework.date', [])
+    .module('com.bendani.php.common.uiframework', [])
     .directive('date', function (){
         return {
             scope: {

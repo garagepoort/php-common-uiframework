@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('com.bendani.php.common.uiframework')
-
     .provider('InfoContainer', function InfoContainerProvider() {
 
         function InfoContainer($rootScope) {
