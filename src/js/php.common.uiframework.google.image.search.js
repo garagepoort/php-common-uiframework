@@ -1,5 +1,5 @@
 angular
-    .module('com.bendani.php.common.uiframework', [])
+    .module('com.bendani.php.common.uiframework')
     .factory('GoogleImage', ['$resource', function ($resource) {
 
         return $resource('https://www.googleapis.com/customsearch/v1', {
