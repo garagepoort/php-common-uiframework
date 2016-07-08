@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
         concat: {
             js: {
-                src: ['src/angular-1.4.5/angular.js', 'src/angular-1.4.5/**/*.js','src/js/com.bendani.php.common.uiframework.js', 'src/**/*.js'],
+                src: ['src/js-libs/jquery.js', 'src/angular-1.4.5/angular.js', 'src/angular-1.4.5/**/*.js','src/js/com.bendani.php.common.uiframework.js', 'src/**/*.js'],
                 dest: 'src/js/concat.js'
             }
         },
