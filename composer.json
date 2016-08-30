@@ -4,5 +4,8 @@
     "psr-4": {
       "Bendani\\PhpCommon\\UiFramework\\": "src"
     }
+  },
+  "require": {
+    "illuminate/support": "~5.0"
   }
 }
