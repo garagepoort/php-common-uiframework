@@ -1,6 +1,6 @@
 <?php
 
-namespace Bendani\PhpCommon\FilterService\Providers;
+namespace Bendani\PhpCommon\UiFramework\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
